@@ -2,8 +2,46 @@
 <html>
     <head>
         <title></title>
+        <link rel="stylesheet" href="input.css">
     </head>
     <body>
-        <h1>Hello Naresh</h1>
+        <div class="container textcenter">
+            <h1>Contact Profile</h1>
+             <div class="card">
+                <div class="card1">
+                    <label for="username" >User Name</label>
+                    <input type="text" id="username" placeholder="Enter username"/>
+                </div>
+                <div class="card1" >
+                    <label for="phonenumber">phone Number</label>
+                    <input type="number" id="phonenumber" placeholder="Enter your phone Number"/>
+                </div>
+                <div class="card1">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter your Email"/>
+                </div>
+                <div class="buttoncard">
+                    <div class="addButton">
+                        <button onclick="addContactDetails()" id="add">Add</button>
+                    </div>
+                    <div class="addButton">
+                        <button onclick="resetContactDetails()" id="reset">Reset</button>
+                    </div>
+                    <div>
+                        <button onclick="saveContactDetails()" id="save">Save</button>
+                    </div>
+                </div>
+             </div>
+             <div id="userInfo">
+                 <table id="tableInfo">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Phone Number</th>
+                        <th>Email Id</th>
+                    </tr>
+                 </table>
+             </div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
