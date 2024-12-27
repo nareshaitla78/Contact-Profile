@@ -21,7 +21,7 @@ function initializeTable() {
 // Add contact details
 function addContactDetails() {
     let contact = {
-        id:  contacts.length+1, // Use a unique timestamp as ID
+        id: contacts.length + 1,
         userName: userName.value.trim() || "-",
         phoneNumber: phoneNumber.value.trim() || "-",
         emailId: emailId.value.trim() || "-"
@@ -46,8 +46,9 @@ function displayContact(contact) {
     }
 
     let operationsElement = document.createElement("td");
-
+    operationsElement.className = "operations";
     let editButton = document.createElement("button");
+    editButton.className = "edit";
     editButton.textContent = "Edit";
     editButton.style.marginRight = "5px";
     editButton.onclick = function () {
@@ -56,6 +57,7 @@ function displayContact(contact) {
 
     let deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
+    deleteButton.className = "delete";  
     deleteButton.onclick = function () {
         deleteContact(contact.id);
     };
